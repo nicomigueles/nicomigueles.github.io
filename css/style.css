@@ -129,10 +129,18 @@ main {
 
 .mainBanner3 {
     background-position-x: 0rem;
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 .mainBanner2 {
     background-position-x: 0rem;
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 .mainBanner {
