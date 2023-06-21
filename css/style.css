@@ -117,7 +117,7 @@ main {
     background-size: 100vw 35vh;
     background-position: center;
     background-position-x: -7rem;
-    height: 40vh;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
