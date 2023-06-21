@@ -2,7 +2,6 @@
     --colorAzul: #0b0421;
     --colorAzul2: #000000;
     --colorVerde: #4cfbac;
-
 }
 
 * {
@@ -12,16 +11,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-
 header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     background-color: var(--colorAzul);
     color: white;
-    height: 14vh;
+    height: 75px;
     border-bottom: 1px solid var(--colorVerde);
     box-shadow: 0px 1px 10px var(--colorVerde);
 }
@@ -40,30 +39,66 @@ header {
 }
 
 .headerTitulo {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .headerSubtitulo {
     display: flex;
     justify-content: center;
-    font-size: 0.7rem;
+    font-size: .8rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
 }
 
 .headerLista {
-    display: flex;
-    justify-content: space-around;
-    list-style: none; 
+    position: fixed;
+    top: 6px;
+    right: 0;
+    background-color: var(--colorAzul);
+    z-index: 8;
+    height: 55vh;
+    width: 60vw;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    padding: 30px;
+    display: none;
+    opacity: 0;
+    border-radius: 2%;
+}
+
+.headerListaDesk {
+    list-style: none;
+    display: none;
+    width: 60%;
+    position: relative;
+    right: 0;
+}
+
+.headerListaItemsDesk a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.4s;
+}
+
+.headerListaItemsDesk a:hover {
+    color: orange;
 }
 
 .headerListaItems {
     padding: 0% .5rem;
     text-align: center;
+    margin: 5px;
+    border-bottom: solid 1px var(--colorVerde);
 }
 
 .headerListaItems a {
     text-decoration: none;
     color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
     transition: color 0.4s;
 }
 
@@ -71,12 +106,18 @@ header {
     color: orange;
 }
 
+main {
+    margin-top: 40px;
+}
+
 .mainBanner, .mainBanner2, .mainBanner3 {
     background-image: url(../images/imgprincipal2.jpg);
+    background-color: var(--colorAzul);
+    background-repeat: no-repeat;
     background-size: 100vw 35vh;
     background-position: center;
     background-position-x: -7rem;
-    height: 20vh;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,7 +126,6 @@ header {
 
 .mainBanner3 {
     background-position-x: 0rem;
-    height: 20vh;
 }
 
 .mainBanner2 {
@@ -93,8 +133,8 @@ header {
 }
 
 .mainBanner {
-    height: 60vh;
-    background-size: 100vh;
+    height: 75vh;
+    background-size: cover;
 }
 
 .mainBannerTitulo {
@@ -103,7 +143,7 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 2rem;
     flex-wrap: wrap;
     line-height: 2.6rem;
     font-weight: bold;
@@ -163,8 +203,8 @@ header {
 
 .mainBannerTxt2 {
     display: flex;
-    font-size: 1rem;
-    padding: 1rem;
+    font-size: .9rem;
+    padding: .8rem;
     text-align: center;
 }
 
@@ -221,6 +261,7 @@ header {
 
 .mainEquipoSection {
     width: 75%;
+    min-height: 4.5rem;
     border: solid 2px var(--colorVerde);
     border-radius: 15px;
     margin: 1rem 1.5rem;
@@ -229,6 +270,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 .mainEquipoImg {
@@ -267,8 +309,8 @@ header {
 }
 
 .mainAreaImg {
-    height: 200px;
-    width: auto;
+    height: auto;
+    width: 90%;
     padding: 0.5rem 1rem;
     border-radius: 25px;
 }
@@ -276,6 +318,7 @@ header {
 .mainAreaSubtitulo {
     color: var(--colorVerde);
     font-size: 1.4rem;
+    font-weight: bold;
 }
 
 .mainAreaTxt {
@@ -381,7 +424,6 @@ footer{
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 16vh;
     }
 
     .headerTextos {
@@ -398,7 +440,8 @@ footer{
     }
 
     .headerLista {
-        width: 100%;
+        width: 60vw;
+        justify-content: space-around;
     }
 
     .headerListaItems {
@@ -406,7 +449,7 @@ footer{
     }    
 
     .headerLista a {
-        font-size: 0.8rem;
+        font-size: 1rem;
         /* margin: 0% 0.7rem; */
     }
 
@@ -460,8 +503,9 @@ footer{
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: 2rem;
-        padding-bottom: 3rem;
+        margin-top: 1rem;
+        padding-bottom: 2rem;
+
     }
 
     .mainEquipoSection {
@@ -498,12 +542,14 @@ footer{
     .mainAreaTxt {
         margin: 0%;
     }
-
-
-    
 }
 
 @media screen and (min-width:768px) {
+    body {
+        max-height: none;
+        min-height: 100vh;
+    }
+
     header {
         height: 12vh;
         flex-direction: row;
@@ -526,6 +572,25 @@ footer{
         font-size: 1.2rem;
     }
 
+    .headerListaDesk {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: -250px;
+    }
+
+    .headerListaItemsDesk {
+        margin: 1rem;
+    }
+
+    .headerListaItemsDesk a {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .ham {
+        display: none;
+    }
+
     .mainBanner, .mainBanner3 {
         background-size: 100vw 100vh;
         background-position-y: -5rem;
@@ -537,7 +602,7 @@ footer{
     .mainBanner2 {
         background-size: 100vw 100vh;
         background-position-y: -15rem;
-        height: 35vh;
+        height: 45vh;
     }
 
     .mainBannerRight {
@@ -640,4 +705,3 @@ footer{
         color: orange;
     }
 }
-
