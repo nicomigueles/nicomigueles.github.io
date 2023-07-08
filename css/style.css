@@ -587,16 +587,18 @@ footer{
     .headerListaDesk {
         display: flex;
         justify-content: flex-end;
-        margin-right: -250px;
+        align-items: center;
+        margin-right: -310px;
     }
 
     .headerListaItemsDesk {
         margin: 1rem;
+        text-align: center;
     }
 
     .headerListaItemsDesk a {
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .ham {
